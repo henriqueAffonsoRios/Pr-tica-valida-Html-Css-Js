@@ -13,8 +13,10 @@ function validaNum(A, B) {
 
 form.addEventListener('submit', function(e){
   e.preventDefault();
+  const valorA = Number(numA.value);
+  const valorB = Number(numB.value);
 
-  if(!validaNum(numA.value, numB.value)){
+  if(!validaNum(valorA, valorB)){
     console.log('estou aqui');
     message.innerHTML = 'O número A deve ser menor que o número B, tente novamente!';
     message.classList.add('error-msg');
